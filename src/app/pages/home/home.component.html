@@ -1,0 +1,58 @@
+<mat-toolbar class="toolbar-container">
+  <div class="toolbar-left">
+    <button mat-stroked-button class="back-button" (click)="navigateToNewCharacter()">Create one!</button>
+  </div>
+  <div class="toolbar-right">
+    <div class="back-action">
+      <h1>Marvel's Universe Characters</h1>
+    </div>
+  </div>
+</mat-toolbar>
+
+<mat-accordion class="example-headers-align">
+  <ng-container *ngFor="let character of displayedCharacters">
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title class="panel-title">
+          {{ character.name }}
+          
+        </mat-panel-title>
+        <mat-panel-description>
+          <p class="numbers">N° Comics: <br>{{ character.comics.available }}</p>
+          <p class="numbers">N° Series: <br>{{ character.series.available }}</p>
+          <p class="numbers">N° Stories: <br>{{ character.stories.available }}</p>
+          <p class="numbers">N° Events: <br>{{ character.events.available }}</p>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="image-input-container">
+        <div class="character-cover">
+          <img *ngIf="character.thumbnail" [src]="character.thumbnail.path + '.' + character.thumbnail.extension" alt="{{ character.name }}">
+        </div>
+        <div class="inputs-container">
+          <p>Descripción: {{ character.description }}</p>
+          <div class="example-button-row">
+            <button mat-mini-fab matTooltip="More Info" style="background-color: rgb(172, 0, 0);" (click)="navigateToCharacterInfo(character.id)">
+              <mat-icon>info</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+      <span class="edit-delete-icons">
+        <button mat-icon-button matTooltip="Edit" (click)="editCharacter(character)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button matTooltip="Delete" (click)="deleteCharacter(character)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </span>
+    </mat-expansion-panel>
+  </ng-container>
+</mat-accordion>
+
+<div class="pagination-controls">
+  <button (click)="changePage(1)" [disabled]="currentPage === 1">First</button>
+  <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+  <span>Page {{ currentPage }} of {{ totalPages }}</span>
+  <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages">Next</button>
+  <button (click)="changePage(totalPages)" [disabled]="currentPage === totalPages">Last</button>
+</div>

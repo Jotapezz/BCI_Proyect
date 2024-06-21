@@ -1,0 +1,49 @@
+<h2 mat-dialog-title>Character Edition: {{ characterForm.value.name }}</h2>
+<form [formGroup]="characterForm" (ngSubmit)="onSave()">
+  <input type="hidden" formControlName="id">
+  <mat-dialog-content>
+    <div class="edit-character-container">
+      <div class="edit-character-image">
+        <img *ngIf="characterForm.value.thumbnail" [src]="characterForm.value.thumbnail" alt="characterForm.name">
+        <mat-form-field appearance="outline">
+          <mat-label>Thumbnail URL</mat-label>
+          <input matInput formControlName="thumbnail" placeholder="Enter thumbnail URL">
+        </mat-form-field>
+      </div>
+      <div class="edit-character-details">
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" required>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Description</mat-label>
+          <textarea matInput formControlName="description"></textarea>
+        </mat-form-field>
+        <div class="row">
+          <mat-form-field appearance="outline" class="half-width">
+            <mat-label>Comics</mat-label>
+            <input type="number" matInput formControlName="comics" required>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="half-width">
+            <mat-label>Events</mat-label>
+            <input type="number" matInput formControlName="events" required>
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field appearance="outline" class="half-width">
+            <mat-label>Series</mat-label>
+            <input type="number" matInput formControlName="series" required>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="half-width">
+            <mat-label>Stories</mat-label>
+            <input type="number" matInput formControlName="stories" required>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button type="button" (click)="onCancel()">Cancelar</button>
+    <button mat-button color="primary" type="submit">Guardar</button>
+  </mat-dialog-actions>
+</form>

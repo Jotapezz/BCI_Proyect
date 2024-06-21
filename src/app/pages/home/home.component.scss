@@ -1,0 +1,184 @@
+@import '../../../styles.scss';
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 15px;
+  background-color: #f6d6e6;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: left;
+  margin-bottom: 30px;
+  color: #6d6d6d;
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.example-headers-align {
+  margin-top: 30px;
+}
+
+.mat-expansion-panel-header {
+  background-color: #f6d6e6;
+  color: #6d6d6d;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.mat-expansion-panel-header-title {
+  font-weight: bold;
+}
+
+.mat-expansion-panel-header-description {
+  font-style: italic;
+}
+
+.image-input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.character-cover {
+  margin-right: 20px;
+}
+
+.character-cover img {
+  align-self: center;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.inputs-container {
+  flex: 1;
+  text-align: justify;
+}
+
+.inputs-container p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6d6d6d;
+}
+
+.example-button-row {
+  margin-top: 10px;
+}
+
+button#actionButton {
+  margin-right: 10px;
+}
+
+.example-button-row a {
+  color: #ffffff;
+  background-color: #ff6f61;
+}
+
+.example-button-row a:hover {
+  background-color: #ff4040;
+}
+
+.load-more-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.load-more-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  margin: 0 auto 10px auto;
+  padding: 0;
+}
+
+.load-more-button:hover {
+  background-color: #155a9c;
+}
+
+.star-icon {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+.star-icon:hover {
+  fill: red;
+}
+
+.load-more-text {
+  color: #1a73e8;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0;
+}
+
+.edit-delete-icons {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.edit-delete-icons button {
+  margin-right: 5px;
+}
+
+.edit-delete-icons button:hover {
+  color: #3f51b5;
+}
+
+.characters-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.characters-list div {
+  margin: 10px;
+  text-align: center;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-controls button {
+  margin: 0 5px;
+}
+
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* Estilos para tabletas */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    width: 80%;
+  }
+}
+
+/* Estilos para pantallas de escritorio */
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 60%;
+  }
+}

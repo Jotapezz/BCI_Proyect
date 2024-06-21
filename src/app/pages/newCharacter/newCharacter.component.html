@@ -1,0 +1,67 @@
+<mat-toolbar>
+    <button mat-button class="back-button" (click)="navigateToHome()">
+      <mat-icon>arrow_back</mat-icon>Back
+    </button>
+    <div class="back-action">
+      <h1>New Character</h1>
+    </div>
+  </mat-toolbar>
+  
+  <mat-tab-nav-panel #tabPanel>
+    <form [formGroup]="characterForm" (ngSubmit)="saveCharacter()">
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" required>
+        </mat-form-field>
+      </div>
+  
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Description</mat-label>
+          <textarea rows="5" matInput formControlName="description" required></textarea>
+        </mat-form-field>
+      </div>
+  
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Comics</mat-label>
+          <input type="number" matInput formControlName="comics" required>
+        </mat-form-field>
+      </div>
+  
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Events</mat-label>
+          <input type="number" matInput formControlName="events" required>
+        </mat-form-field>
+      </div>
+  
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Series</mat-label>
+          <input type="number" matInput formControlName="series" required>
+        </mat-form-field>
+      </div>
+  
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Stories</mat-label>
+          <input type="number" matInput formControlName="stories" required>
+        </mat-form-field>
+      </div>
+  
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Thumbnail URL</mat-label>
+          <input matInput formControlName="thumbnail" required>
+        </mat-form-field>
+      </div>
+  
+      <mat-card-actions class="btn-actions">
+        <button mat-raised-button id="save" type="submit">SAVE</button>
+        <button mat-raised-button id="cancel" style="background-color: rgb(194, 184, 161);" type="button" (click)="cancel()">CANCEL</button>
+      </mat-card-actions>
+    </form>
+  </mat-tab-nav-panel>
+  

@@ -1,0 +1,28 @@
+<mat-toolbar class="toolbar-container">
+  <div class="toolbar-left">
+    <button mat-stroked-button class="back-button" (click)="navigateToHome()">
+      <mat-icon>home</mat-icon>
+    </button>
+  </div>
+  <div class="toolbar-right">
+    <div class="back-action">
+      <h1>{{ character?.name || 'Personajes de Marvel' }}</h1>
+    </div>
+  </div>
+</mat-toolbar>
+
+<div *ngIf="character" class="character-info-container">
+  <div class="character-image">
+    <img *ngIf="character.thumbnail.path" [src]="character.thumbnail.path + '/portrait_incredible.' + character.thumbnail.extension" alt="{{ character.name }}">
+    <img *ngIf="character.createdBy" [src]="character.thumbnail" alt="{{character.name}}">
+  </div>
+  <div class="character-details">
+    <h2>{{ character.name }}</h2>
+    <p class="character-description">Description: {{ character.description ? character.description : "No information available" }}</p>
+    <p class="character-description">{{ character.name }} appears on:</p>
+    <p class="character-description">Comics: {{ (character.comics.available || character.comics) ? (character.comics.available || character.comics) : 0 }}</p>
+    <p class="character-description">Events: {{ (character.events.available || character.events) ? (character.events.available || character.events) : 0}}</p>
+    <p class="character-description">Series: {{ (character.series.available || character.series) ? (character.series.available || character.series) : 0}}</p>
+    <p class="character-description">Stories: {{ (character.stories.available || character.stories) ? (character.stories.available || character.stories) : 0}}</p>
+  </div>
+</div>

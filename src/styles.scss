@@ -1,0 +1,175 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+  font-family: system-ui, -apple-system, 'Segoe UI', Oxygen, 'Open Sans', sans-serif;
+  background-color: #f0f0f0; /* Gris claro */
+  margin: 0;
+}
+
+mat-label {
+  font-size: 15px;
+}
+
+mat-tab-nav-panel {
+  padding: 20px;
+  display: flow-root;
+}
+
+mat-form-field {
+  display: block;
+}
+
+mat-grid-list {
+  width: 100%;
+  align-content: center;
+}
+
+mat-toolbar {
+  background-color: #f6d6e6; /* Rosa suave */
+  color: #6d6d6d; /* Gris oscuro */
+}
+
+.back-button {
+  color: #6d6d6d; /* Gris oscuro */
+  border-color: #6d6d6d; /* Gris oscuro */
+  background-color: #b3d1e3; /* Azul claro */
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #99afc6; /* Azul más oscuro */
+  color: #ffffff; /* Blanco */
+}
+
+.back-action h1 {
+  align-content: end;
+  color: #6d6d6d; /* Gris oscuro */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra de texto suave */
+}
+
+mat-expansion-panel {
+  background-color: #f6d6e6; /* Rosa suave */
+}
+
+mat-card-actions button {
+  color: #6d6d6d; /* Gris oscuro */
+}
+
+#save {
+  background-color: #c9e4ca; /* Verde suave */
+}
+
+#cancel {
+  background-color: #e8d9c0; /* Beige */
+}
+
+mat-card-content {
+  padding: 25%;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+.image-input-container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1rem;
+}
+
+.character-cover {
+  width: 15%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.character-cover img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content {
+  width: 50%;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.btn-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0;
+  justify-content: flex-start;
+}
+
+.example-button-row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+  div {
+    justify-content: flex-end;
+  }
+}
+
+.example-container mat-form-field + mat-form-field {
+  margin-left: 8px;
+}
+
+.toolbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toolbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.back-action {
+  margin-right: 20px; /* Espacio entre el botón y el título */
+}
+
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* Estilos para tabletas */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    width: 80%;
+  }
+}
+
+/* Estilos para pantallas de escritorio */
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 60%;
+  }
+}

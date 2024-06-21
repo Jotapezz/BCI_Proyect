@@ -1,0 +1,55 @@
+@import '../../../styles.scss';
+
+mat-toolbar {
+  background-color: #5cb85c;
+  color: white;
+}
+
+.back-button {
+  color: white;
+}
+
+.back-action {
+  flex-grow: 1;
+  text-align: center;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.btn-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+#save {
+  background-color: #4cae4c;
+  color: white;
+}
+
+#save:hover {
+  background-color: #45a545;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* Estilos para tabletas */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    width: 80%;
+  }
+}
+
+/* Estilos para pantallas de escritorio */
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 60%;
+  }
+}
