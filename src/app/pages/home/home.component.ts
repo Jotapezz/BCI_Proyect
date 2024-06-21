@@ -85,6 +85,16 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.userCharacters = characters;
   }
   
+  formatValue(value: any): number {
+    console.log('valor: ',value)
+    if (value.available == 0) {
+      return 0;
+    } else if (value && value.available) {
+      return value.available;
+    } else {
+      return value || 'No information available';
+    }
+  }
 
   loadMoreCharacters(): void {
     this.offset += this.limit;

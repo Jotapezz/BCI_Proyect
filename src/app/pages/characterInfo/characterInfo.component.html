@@ -20,9 +20,9 @@
     <h2>{{ character.name }}</h2>
     <p class="character-description">Description: {{ character.description ? character.description : "No information available" }}</p>
     <p class="character-description">{{ character.name }} appears on:</p>
-    <p class="character-description">Comics: {{ (character.comics.available || character.comics) ? (character.comics.available || character.comics) : 0 }}</p>
-    <p class="character-description">Events: {{ (character.events.available || character.events) ? (character.events.available || character.events) : 0}}</p>
-    <p class="character-description">Series: {{ (character.series.available || character.series) ? (character.series.available || character.series) : 0}}</p>
-    <p class="character-description">Stories: {{ (character.stories.available || character.stories) ? (character.stories.available || character.stories) : 0}}</p>
+    <p class="character-description">Comics: {{ formatValue(character.comics) }}</p>
+    <p class="character-description">Events: {{ formatValue(character.events) }}</p>
+    <p class="character-description">Series: {{ formatValue(character.series) }}</p>
+    <p class="character-description">Stories: {{ formatValue(character.stories) }}</p>
   </div>
 </div>

@@ -74,6 +74,17 @@ export class CharacterInfoComponent implements OnInit {
     }
   }
 
+  formatValue(value: any): number {
+    console.log('valor: ',value)
+    if (value.available == 0) {
+      return 0;
+    } else if (value && value.available) {
+      return value.available;
+    } else {
+      return value || 'No information available';
+    }
+  }
+
 
   populateForm(): void {
     if (this.character) {
